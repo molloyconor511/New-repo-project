@@ -27,14 +27,10 @@ const state = {
 
 
 
-function setState(data, filteredPrices) {
+function setState(data, filteredPrices = [], myType = "") {
   console.log("setting state", data, filteredPrices);
 
-  // const hisense = data.filter(function(brand) {
-  //   if(brand.includes("Hisense")) {
-  //     return true;
-  //   }
-  // })
+  
    if( filteredPrices.length > 0 ) {
     const filteredData = data.filter(function(element) {
       console.log(element, "element");
@@ -45,14 +41,22 @@ function setState(data, filteredPrices) {
         } else if (filteredPrices[2] === true && element.productCost > 700) {
           return true 
         };
-        
-        // let brandName = data.includes("Hisense");
-        //   if(filteredBrands[0] = brandName) {
-        //     return true;
-        //   }
+      
     })
     console.log("my string", filteredData);
     state.products = filteredData;
+  } else {
+    console.log("here", myType);
+    const myTypes = data.filter(function(myProduct) {
+      console.log(myProduct.productName, myType);
+      if(myProduct.productName.includes(myType)) {
+        console.log("bla");
+        return true;
+        
+      }
+    })
+    console.log(myTypes);
+    state.products = myTypes;
   }
   console.log(state.products);
 }
@@ -121,13 +125,32 @@ function getFilteredProducts(event) {
         renderProductsList()
       });
 }
+function getProductType(event) {
+    
+  console.log("product type", event, event.target.elements[0].value);
+  console.log("product type", event);
+  
+
+  event.preventDefault();
+
+  fetch("http://localhost:3000/products")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      // event.target.elements[0].value = select option
+      setState(data, [], event.target.elements[0].value);
+      
+      renderProductsList();
+    });
+}
 
 
 
 //Fetch data from event listener
 function listenProduct() {
     const productTypeForm = document.getElementById("selectProductType");  
-    productTypeForm.addEventListener("submit", getProducts);
+    productTypeForm.addEventListener("submit", getProductType);
 
     const lowRange = document.getElementById("lowRange");    
     lowRange.addEventListener("change", getFilteredProducts);  
