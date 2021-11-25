@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#introSection {
+    
+    width: max-content;
+    height: fit-content;
+
+}
+.introHeader {
+    height: 0.2fr;
+    display: grid;
+    grid-template-areas: "left right";
+    column-gap: 10%;
+    grid-template-columns: 1fr;
+}
+/* .introHeader {
+    display: grid;
+    grid-template-rows: 2fr 1fr 2fr;
+    
+    
+} */
+#title {
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 20px;
+    
+}
+#contactInfo {
+    text-align: center;
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+#userInfo {
+    text-align-last: right;
+    padding-right: 20px;
+}
+
+/* #selectTVType {
+    position: fixed;
+    text-align: center;
+    bottom : auto;
+    top : auto;
+    right: auto;
+    left: auto;
+} */
+
+img.productImage {
+    display: block;
+    block-size: 5fr;
+}
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}  
+  h1 {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+}
+h3 #contactInfo {
+  display: block;
+  
+}
+
+aside {
+    display: grid;
+    grid-template-areas:
+      "aside"
+      "aside"
+      "aside";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+  }
+  input[type='checkbox'] {
+    float: left;
+    width: 20px;
+  }
+  input[type='checkbox'] + label {
+    display: block;
+    width: 30px;
+  }
+  
+.selectProductType {
+    grid-area: aside;
+  
+    padding-left: 1rem;
+    padding-top: 2rem;
+  } 
+ 
+ getProductListItem {
+     display: grid;
+     grid-template: auto;
+
+ }
+ input[type='checkbox'] {
+    float: left;
+    width: 20px;
+  }
+  input[type='checkbox'] + label {
+    display: block;
+    width: 30px;
+  }

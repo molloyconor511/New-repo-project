@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Black Friday TV Deals</title>
+</head>
+<body>
+    <!-- <header>
+        <h1 id="title">Black Friday TV Deals</h1>
+        <h2 id="welcome-section">Welcome to ...</h2>
+        <p class="user-instructions">
+            <h3>User instructions</h3>
+        </p>
+        
+    </header> -->
+
+    <header class="introSection">
+        <ul class="introHeader">
+            <li class="navBar">                
+                <h1 id="title">Black Friday TV Deals</h1>
+            </li>
+            <!-- <li class="navBar">
+                <button id="welcomeSection">Welcome to...</button>
+            </li> -->
+            <li class="navBar">
+                <h3 id="contactInfo">Contact us 24/7 for tech advice on: </h3> 
+                <button id="userInfo">Contact Us</button>                
+            </li>
+        </ul>
+    </header>
+    
+    <aside class="selectProductType">
+        <form id="selectProductType" autocomplete="off">
+            <label for="selectTVType">Please select your preferred TV type</label>
+            <select id="selectTVType" name="selectTVType">
+                <option value="default">Select TV Display</option>
+                <option value="4k Ultra HD">4k Ultra HD</option>
+                <option value="HD Ready">HD Ready</option>
+                <option value="8k Ultra Sharp HD">8k Ultra Sharp HD</option>
+            </select>
+            <input type="submit" value="Submit" />
+            <!-- <p id="test"></p> -->
+        </form>
+        
+        <div id="filterByCost"> 
+        <label for="€">Please select your price range:</label> <br>
+            <input type="checkbox" name="€" id="lowRange">€150 - €400 <br>
+            <input type="checkbox" name="€" id="midRange">€400 - €700 <br>
+            <input type="checkbox" name="€" id="highRange">€700+   
+        </div>
+        
+        <div id="filterByBrand">
+            <label for="brandName">Filter results by Brand :</label> <br>
+            <input type="checkbox" name="brandName" id="hiSense">Hisense <br>
+            <input type="checkbox" name="brandName" id="samsung">Samsung <br>
+            <input type="checkbox" name="brandName" id="tcl">TCL <br>
+            <input type="checkbox" name="brandName" id="sony">Sony <br>
+            <input type="checkbox" name="brandName" id="lg">LG <br>
+            <input type="checkbox" name="brandName" id="panasonic">Panasonic 
+        </div>
+    </aside>
+    <main></main>
+    <script src="js/index.js"></script>
+</body>
+</html>
